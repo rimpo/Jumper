@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://MovingPlatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://StartLevel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://StaticPlatform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://LevelComplete.tscn" type="PackedScene" id=5]
+
+[node name="Level2" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 110.536, 859.251 )
+
+[node name="MovingPlatform3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 393.202, 304.646 )
+move_speed = 1.0
+move_direction = Vector2( 0, 1 )
+
+[node name="MovingPlatform" parent="." instance=ExtResource( 1 )]
+position = Vector2( 298.741, 831.884 )
+move_speed = 1.0
+move_direction = Vector2( 0, 1 )
+
+[node name="MovingPlatform4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 438.672, 681.084 )
+move_speed = 1.5
+move_distance = 30.0
+move_direction = Vector2( 0, 1 )
+
+[node name="MovingPlatform6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 147.395, 395.185 )
+move_speed = 2.2
+move_distance = 30.0
+move_direction = Vector2( 1, 0 )
+
+[node name="StartPlatform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 109.257, 965.083 )
+
+[node name="StaticPlatform" parent="." instance=ExtResource( 4 )]
+position = Vector2( 183.588, 164.122 )
+
+[node name="LevelComplete" parent="." instance=ExtResource( 5 )]
+position = Vector2( 183.587, 126.188 )
+world_scene = "res://Levels/Level3.tscn"
+
+[node name="StaticPlatform2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 255.206, 551.892 )

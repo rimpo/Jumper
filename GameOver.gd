@@ -1,0 +1,24 @@
+extends Position2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+var time_taken = ""
+var is_record_broken = false
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	$Label.set_text("GAME OVER")
+	if time_taken == "":
+		return
+
+	if is_record_broken == true:
+		$Label2.set_text("Yay! Record Broken. Time Taken:"+time_taken)
+	else:
+		$Label2.set_text("Time Taken:"+time_taken)
